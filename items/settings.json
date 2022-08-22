@@ -1,0 +1,15 @@
+[{
+  "name": "Total Artifacts",
+  "type": "consumable",
+  "initial_quantity": 6,
+  "min_quantity": 0,
+  "max_quantity": 12,
+  "codes": "settings,setting,setting_goal_total_artifacts"
+}, {
+  "name": "Skip Impact Crater",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/checked.png",
+  "disabled_img": "images/unchecked.png",
+  "codes": "settings,setting,setting_goal_skip_impact_crater"
+}]

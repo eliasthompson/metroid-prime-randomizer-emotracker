@@ -1,0 +1,16 @@
+{
+  "name": "Metroid Prime Randomizer Tracker",
+  "game_name": "Metroid Prime Randomizer",
+  "platform": "randovania",
+  "package_version": "1.0.0",
+  "package_uid": "metroid_prime_randomizer_emotracker_eliasthompson",
+  "author": "Elias Thompson",
+  "variants": {
+    "item_tracker": {
+      "display_name": "Item Tracker"
+    },
+    "item_tracker_skinny": {
+      "display_name": "Item Tracker (Skinny)"
+    },
+  }
+}

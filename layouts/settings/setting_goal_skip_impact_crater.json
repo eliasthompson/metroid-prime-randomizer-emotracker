@@ -1,0 +1,27 @@
+{
+  "setting_goal_skip_impact_crater": {
+    "type": "array",
+    "orientation": "horizontal",
+    "content": [{
+      "type": "image",
+      "h_alignment": "left",
+      "margin": "2",
+      "width": 24,
+      "height": 24,
+      "image": "images/metroid.png"
+    }, {
+      "type": "image",
+      "margin": "6,2,2,2",
+      "width": 200,
+      "height": 24,
+      "image": "images/labels/skipimpactcrater.png"
+    }, {
+      "type": "item",
+      "h_alignment": "right",
+      "margin": "2",
+      "width": 24,
+      "height": 24,
+      "item": "setting_goal_skip_impact_crater"
+    }]
+  }
+}

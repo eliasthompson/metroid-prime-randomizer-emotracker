@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "type": "array",
+    "content": [{
+      "type": "group",
+      "header": "Settings",
+      "content": [{
+        "type": "array",
+        "orientation": "vertical",
+        "content": [{
+          "type": "group",
+          "header": "Goals",
+          "header_background": "#1b1b1b",
+          "content": [{
+            "type": "array",
+            "orientation": "vertical",
+            "content": [{
+              "type": "layout",
+              "key": "setting_goal_total_artifacts"
+            }, {
+              "type": "layout",
+              "key": "setting_goal_skip_impact_crater"
+            }]
+          }]
+        }]
+      }]
+    }]
+  }
+}

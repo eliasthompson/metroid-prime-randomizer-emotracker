@@ -1,0 +1,206 @@
+[{
+  "name": "Power Beam",
+  "type": "toggle",
+  "loop": true,
+  "initial_active_state": true,
+  "img": "images/powerbeam.png",
+  "codes": "beam,powerbeam,power"
+}, {
+  "name": "Wave Beam",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/wavebeam.png",
+  "codes": "beam,wavebeam,wave"
+}, {
+  "name": "Ice Beam",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/icebeam.png",
+  "codes": "beam,icebeam,ice"
+}, {
+  "name": "Plasma Beam",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/plasmabeam.png",
+  "codes": "beam,plasmabeam,plasma"
+}, {
+  "name": "Super Missile",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/supermissile.png",
+  "codes": "beamcombo,supermissile,supers"
+}, {
+  "name": "Wavebuster",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/wavebuster.png",
+  "codes": "beamcombo,wavebuster"
+}, {
+  "name": "Ice Spreader",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/icespreader.png",
+  "codes": "beamcombo,icespreader"
+}, {
+  "name": "Flamethrower",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/flamethrower.png",
+  "codes": "beamcombo,flamethrower,validator"
+}, {
+  "name": "Combat Visor",
+  "type": "toggle",
+  "loop": true,
+  "initial_active_state": true,
+  "img": "images/combatvisor.png",
+  "codes": "visor,combatvisor,combat"
+}, {
+  "name": "Scan Visor",
+  "type": "toggle",
+  "loop": true,
+  "initial_active_state": true,
+  "img": "images/scanvisor.png",
+  "codes": "visor,scanvisor,scan"
+}, {
+  "name": "Thermal Visor",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/thermalvisor.png",
+  "codes": "visor,thermalvisor,thermal"
+}, {
+  "name": "X-Ray Visor",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/xrayvisor.png",
+  "codes": "visor,xrayvisor,xray"
+}, {
+  "name": "Varia Suit",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/variasuit.png",
+  "codes": "suit,variasuit,varia"
+}, {
+  "name": "Gravity Suit",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/gravitysuit.png",
+  "codes": "suit,gravitysuit,gravity"
+}, {
+  "name": "Phazon Suit",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/phazonsuit.png",
+  "codes": "suit,phazonsuit,phazon"
+}, {
+  "name": "Morph Ball",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/morphball.png",
+  "codes": "morphball,morph"
+}, {
+  "name": "Morph Ball Bomb",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/morphballbomb.png",
+  "codes": "morphballbomb,bombs,bomb"
+}, {
+  "name": "Power Bomb",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/powerbomb.png",
+  "codes": "powerbomb,pbs,pb"
+}, {
+  "name": "Boost Ball",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/boostball.png",
+  "codes": "boostball,boost,pb"
+}, {
+  "name": "Spider Ball",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/spiderball.png",
+  "codes": "spiderball,spider,spiderbeam"
+}, {
+  "name": "Charge Beam",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/chargebeam.png",
+  "codes": "chargebeam,charge"
+}, {
+  "name": "Grapple Beam",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/grapplebeam.png",
+  "codes": "grapplebeam,grapple,useless"
+}, {
+  "name": "Space Jump Boots",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/spacejumpboots.png",
+  "codes": "spacejumpboots,spacejump,sj,hijump,spinboost"
+}, {
+  "name": "Missile Launcher",
+  "type": "toggle",
+  "loop": true,
+  "img": "images/missilelauncher.png",
+  "codes": "missilelauncher,missiles,missile"
+}, {
+  "name": "Energy Tank",
+  "type": "consumable",
+  "initial_quantity": 0,
+  "min_quantity": 0,
+  "max_quantity": 14,
+  "img": "images/energytank.png",
+  "codes": "energytank,etank,energy,e,healthnugget"
+}, {
+  "name": "Artifacts",
+  "type": "progressive",
+  "allow_disabled": false,
+  "stages": [{
+    "img": "images/artifacts0.png",
+    "codes": "artifacts,artifacts0,zeroarifcats,noartifacts"
+  }, {
+    "img": "images/artifacts1.png",
+    "codes": "artifacts,artifacts1,oneartifacts,oneartifact"
+  }, {
+    "img": "images/artifacts2.png",
+    "codes": "artifacts,artifacts2,twoartifacts"
+  }, {
+    "img": "images/artifacts3.png",
+    "codes": "artifacts,artifacts3,threeartifacts"
+  }, {
+    "img": "images/artifacts4.png",
+    "codes": "artifacts,artifacts4,fourartifacts"
+  }, {
+    "img": "images/artifacts5.png",
+    "codes": "artifacts,artifacts5,fiveartifacts"
+  }, {
+    "img": "images/artifacts6.png",
+    "codes": "artifacts,artifacts6,sixartifacts"
+  }, {
+    "img": "images/artifacts7.png",
+    "codes": "artifacts,artifacts7,sevenartifacts"
+  }, {
+    "img": "images/artifacts8.png",
+    "codes": "artifacts,artifacts8,eightartifacts"
+  }, {
+    "img": "images/artifacts9.png",
+    "codes": "artifacts,artifacts9,nineartifacts"
+  }, {
+    "img": "images/artifacts10.png",
+    "codes": "artifacts,artifacts10,tenartifacts"
+  }, {
+    "img": "images/artifacts11.png",
+    "codes": "artifacts,artifacts11,elevenartifacts"
+  }, {
+    "img": "images/artifacts12.png",
+    "codes": "artifacts,artifacts12,twelveartifacts"
+  }]
+}, {
+  "name": "Go Mode",
+  "type": "toggle",
+  "ignore_user_input": true,
+  "img": "images/ship.png",
+  "codes": "gomode,go"
+}]
