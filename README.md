@@ -1,9 +1,9 @@
-# Metroid Prime Randomizer Tracker
+# Metroid Prime Randomizer EmoTracker
 
-A Metroid Prime Randomizer tracker for use with Metroid Prime randomizers generated through [Randovania](https://github.com/randovania/randovania). It is currently only an item tracker with two variants—the square-ish default Item Tracker and the more elongated Item Tracker (Skinny). Map tracking and (with some luck) autotracking is planned for a future date.
+A Metroid Prime Randomizer [EmoTracker](https://emotracker.net) tracker for use with Metroid Prime randomizers generated through [Randovania](https://github.com/randovania/randovania). It is currently only an item tracker with two variants—the square-ish default Item Tracker and the more elongated Item Tracker (Skinny). Map tracking and (with some luck) autotracking is planned for a future date.
 
 ## Go Mode Indicator
-This tracker includes an automatic Go Mode Indicator (Samus' Ship) which will toggle on or off depending on if you are in go mode. It currently does not take trick logic into account, but does rely on two settings configurable by you—the total number of artifacts required to beat the game (Default: 6), and whether or not you are skipping Impact Crater. This may eventually be updated to let you put in your trick levels, but this is a low priority.
+This tracker includes an automatic Go Mode Indicator (Samus' Ship) which will toggle on or off depending on if you are in go mode. It currently does not take trick logic into account, but does rely on two settings configurable by you—the total number of artifacts required to beat the game (Default: 6), and whether or not you are skipping Impact Crater. This may eventually be updated to let you put in your trick levels, but this is a low priority. Elevator, door, and entrance randomizer is not planned to be supported by the Go Mode Indicator.
 
 ## Broadcast View
 Broadcast view works as expected, but by default shows the horizontal tracker orientation. To show the vertical orientation, you'll need to create a user override:

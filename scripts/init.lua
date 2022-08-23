@@ -1,6 +1,5 @@
 ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/common.lua")
-ScriptHost:LoadScript("scripts/callbacks.lua")
 
 Tracker:AddItems("items/settings.json")
 
@@ -27,5 +26,6 @@ end
 
 Tracker:AddLayouts("layouts/trackers.json")
 
+ScriptHost:LoadScript("scripts/callbacks.lua")
 -- Soon...
 -- ScriptHost:LoadScript("scripts/autotracking.lua")

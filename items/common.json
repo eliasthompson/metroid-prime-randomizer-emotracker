@@ -159,43 +159,43 @@
   "allow_disabled": false,
   "stages": [{
     "img": "images/artifacts0.png",
-    "codes": "artifacts,artifacts0,zeroarifcats,noartifacts"
+    "codes": "artifacts,artifact,artifact,artifacts0,zeroarifcats,noartifacts"
   }, {
     "img": "images/artifacts1.png",
-    "codes": "artifacts,artifacts1,oneartifacts,oneartifact"
+    "codes": "artifacts,artifact,artifacts1,oneartifacts,oneartifact"
   }, {
     "img": "images/artifacts2.png",
-    "codes": "artifacts,artifacts2,twoartifacts"
+    "codes": "artifacts,artifact,artifacts2,twoartifacts"
   }, {
     "img": "images/artifacts3.png",
-    "codes": "artifacts,artifacts3,threeartifacts"
+    "codes": "artifacts,artifact,artifacts3,threeartifacts"
   }, {
     "img": "images/artifacts4.png",
-    "codes": "artifacts,artifacts4,fourartifacts"
+    "codes": "artifacts,artifact,artifacts4,fourartifacts"
   }, {
     "img": "images/artifacts5.png",
-    "codes": "artifacts,artifacts5,fiveartifacts"
+    "codes": "artifacts,artifact,artifacts5,fiveartifacts"
   }, {
     "img": "images/artifacts6.png",
-    "codes": "artifacts,artifacts6,sixartifacts"
+    "codes": "artifacts,artifact,artifacts6,sixartifacts"
   }, {
     "img": "images/artifacts7.png",
-    "codes": "artifacts,artifacts7,sevenartifacts"
+    "codes": "artifacts,artifact,artifacts7,sevenartifacts"
   }, {
     "img": "images/artifacts8.png",
-    "codes": "artifacts,artifacts8,eightartifacts"
+    "codes": "artifacts,artifact,artifacts8,eightartifacts"
   }, {
     "img": "images/artifacts9.png",
-    "codes": "artifacts,artifacts9,nineartifacts"
+    "codes": "artifacts,artifact,artifacts9,nineartifacts"
   }, {
     "img": "images/artifacts10.png",
-    "codes": "artifacts,artifacts10,tenartifacts"
+    "codes": "artifacts,artifact,artifacts10,tenartifacts"
   }, {
     "img": "images/artifacts11.png",
-    "codes": "artifacts,artifacts11,elevenartifacts"
+    "codes": "artifacts,artifact,artifacts11,elevenartifacts"
   }, {
     "img": "images/artifacts12.png",
-    "codes": "artifacts,artifacts12,twelveartifacts"
+    "codes": "artifacts,artifact,artifacts12,twelveartifacts"
   }]
 }, {
   "name": "Go Mode",
