@@ -1,0 +1,44 @@
+{
+  "tracker_shared_vertical": {
+    "type": "array",
+    "orientation": "vertical",
+    "width": 200,
+    "height": 648,
+    "margin": "6",
+    "content": [{
+      "type": "itemgrid",
+      "h_alignment": "left",
+      "item_margin": "2",
+      "item_height": 60,
+      "item_width": 60,
+      "rows": [
+        ["powerbeam", "combatvisor", "supermissile"],
+        ["wavebeam", "scanvisor", "wavebuster"],
+        ["icebeam", "thermalvisor", "icespreader"],
+        ["plasmabeam", "xrayvisor", "flamethrower"],
+        ["morphball", "variasuit", "chargebeam"],
+        ["boostball", "gravitysuit", "spacejumpboots"],
+        ["spiderball", "phazonsuit", "grapplebeam"]
+      ]
+    }, {
+      "type": "array",
+      "orientation": "horizontal",
+      "margin": "0,-10,0,0",
+      "content": [{
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "2",
+        "item_height": 60,
+        "item_width": 60,
+        "rows": [
+          ["morphballbomb"],
+          ["powerbomb"],
+          ["missilelauncher"]
+        ]
+      }, {
+        "type": "layout",
+        "key": "tracker_artifacts"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,64 @@
+[{
+  "name": "Landing Site Connections",
+  "sections": [{
+    "name": "Ship > Pickup (Missile Expansion)",
+    "item_count": 1,
+    "access_rules": [
+      "morphball"
+    ]
+  }, {
+    "name": "Ship > Door to Gully",
+    "item_count": 1,
+    "access_rules": [
+      "spacejumpboots",
+      "setting_trick_dash2",
+      "morphball, morphballbombs, setting_trick_bj4",
+      "scanvisor, setting_trick_dash1",
+    ]
+  }, {
+    "name": "Ship > Door to Waterfall Cavern",
+    "item_count": 1,
+    "access_rules": [
+      "",
+    ]
+  }]
+}, {
+  "name": "Alcove Connections",
+  "sections": [{
+    "name": "Pickup (Space Jump Boots) > Door to Landing Site",
+    "item_count": 1,
+    "access_rules": [
+      "spacejumpboots",
+      "setting_trick_sjump1",
+      "morphball, morphballbombs, setting_trick_bj1",
+    ]
+  }]
+}, {
+  "name": "Waterfall Cavern Connections",
+  "sections": [{
+    "name": "Door to Frigate Crash Site > Door to Landing Site",
+    "item_count": 1,
+    "access_rules": [
+      "morphball",
+    ]
+  }, {
+    "name": "Door to Landing Site > Door to Frigate Crash Site",
+    "item_count": 1,
+    "access_rules": [
+      "morphball",
+    ]
+  }]
+}, {
+  "name": "Frigate Crash Site Connections",
+  "sections": [{
+    "name": "Door to Waterfall Cavern > Pickup (Missile Expansion)",
+    "item_count": 1,
+    "access_rules": [
+      /* "spacejumpboots, $rule_or|gravitysuit|setting_trick_ljump1|$rule_and|setting_trick_sjump1|setting_trick_underwatermovement1",
+      "scanvisor, $rule_or|setting_trick_dash2|$rule_and|spacejumpboots|setting_trick_dash2",
+      "setting_trick_sjump3, setting_nogravity, $rule_not|gravitysuit, setting_trick_underwatermovement1", */
+      "$tpl_use_grapple_beam, setting_trick_movement1",
+      "gravitysuit, setting_trick_standable2, setting_trick_ljump2",
+    ]
+  }]
+}]

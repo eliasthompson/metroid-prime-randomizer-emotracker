@@ -1,0 +1,14 @@
+-- Generated from Randovania header.json on 2022/08/26 at 01:58:13
+function tpl_test() if Tracker:ProviderCountForCode("morphball") > 0 then return true end return false end
+function tpl_heatresisting_suit() if ( Tracker:ProviderCountForCode("gravitysuit") > 0 or Tracker:ProviderCountForCode("variasuit") > 0 or Tracker:ProviderCountForCode("phazonsuit") > 0 ) then return true end return false end
+function tpl_have_all_beams() if ( Tracker:ProviderCountForCode("power") > 0 and Tracker:ProviderCountForCode("wave") > 0 and Tracker:ProviderCountForCode("ice") > 0 and Tracker:ProviderCountForCode("plasma") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_shoot_super_missile() if ( Tracker:ProviderCountForCode("power") > 0 and Tracker:ProviderCountForCode("missile") > 0 and Tracker:ProviderCountForCode("charge") > 0 and Tracker:ProviderCountForCode("supers") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_shoot_power_beam() if ( Tracker:ProviderCountForCode("power") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_shoot_wave_beam() if ( Tracker:ProviderCountForCode("wave") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_move_past_scatter_bombu() if ( Tracker:ProviderCountForCode("morphball") > 0 or ( Tracker:ProviderCountForCode("setting_trick_movement1") > 0 and Tracker:ProviderCountForCode("damage") > 0 ) or Tracker:ProviderCountForCode("setting_trick_movement2") > 0 or Tracker:ProviderCountForCode("damage") > 0 or tpl_shoot_wave_beam() ) then return true end return false end
+function tpl_shoot_ice_beam() if ( Tracker:ProviderCountForCode("ice") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_open_normal_door() if ( tpl_shoot_any_beam() or ( Tracker:ProviderCountForCode("scan") > 0 and Tracker:ProviderCountForCode("morphball") > 0 and Tracker:ProviderCountForCode("bombs") > 0 ) ) then return true end return false end
+function tpl_use_grapple_beam() if ( Tracker:ProviderCountForCode("grapple") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_shoot_any_beam() if ( tpl_can_use_arm_cannon() and ( Tracker:ProviderCountForCode("power") > 0 or Tracker:ProviderCountForCode("wave") > 0 or Tracker:ProviderCountForCode("ice") > 0 or Tracker:ProviderCountForCode("plasma") > 0 ) ) then return true end return false end
+function tpl_shoot_plasma_beam() if ( Tracker:ProviderCountForCode("plasma") > 0 and tpl_can_use_arm_cannon() ) then return true end return false end
+function tpl_can_use_arm_cannon() if ( Tracker:ProviderCountForCode("combat") > 0 or Tracker:ProviderCountForCode("thermal") > 0 or Tracker:ProviderCountForCode("x-ray") > 0 ) then return true end return false end

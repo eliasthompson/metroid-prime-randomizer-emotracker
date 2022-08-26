@@ -1,0 +1,67 @@
+[{
+  "name": "Landing Site Doors",
+  "sections": [{
+    "name": "Door to Alcove",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }, {
+    "name": "Door to Canyon Cavern",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }, {
+    "name": "Door to Gully",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }, {
+    "name": "Door to Temple Hall",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }, {
+    "name": "Door to Waterfall Cavern",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }]
+}, {
+  "name": "Alcove Doors",
+  "sections": [{
+    "name": "Door to Landing Site",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }]
+}, {
+  "name": "Waterfall Cavern Doors",
+  "sections": [{
+    "name": "Door to Landing Site",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Normal Door",
+    ]
+  }, {
+    "name": "Door to Frigate Crash Site",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Missile Blast Shield",
+    ]
+  }]
+}, {
+  "name": "Frigate Crash Site Doors",
+  "sections": [{
+    "name": "Door to Waterfall Cavern",
+    "item_count": 1,
+    "access_rules": [
+      "@Doors/Missile Blast Shield",
+    ]
+  }]
+}]

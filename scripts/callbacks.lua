@@ -1,36 +1,35 @@
 function tracker_on_accessibility_updated()
-  local go_mode_object = Tracker:FindObjectForCode("gomode")
-  local artifacts_object = Tracker:FindObjectForCode("artifacts")
-  local setting_goal_total_artifacts_object = Tracker:FindObjectForCode("setting_goal_total_artifacts")
-  local setting_goal_skip_impact_crater_object = Tracker:FindObjectForCode("setting_goal_skip_impact_crater")
+  local obj_go_mode = Tracker:FindObjectForCode("gomode")
+  local obj_artifacts = Tracker:FindObjectForCode("artifacts")
+  local obj_setting_goal_total_artifacts = Tracker:FindObjectForCode("setting_goal_total_artifacts")
+  local obj_setting_goal_skip_impact_crater = Tracker:FindObjectForCode("setting_goal_skip_impact_crater")
 
-  if setting_goal_total_artifacts_object ~= nil then
-    local artifact_max = math.floor(setting_goal_total_artifacts_object.AcquiredCount)
+  if obj_setting_goal_total_artifacts then
+    local artifact_max = math.floor(obj_setting_goal_total_artifacts.AcquiredCount)
 
     -- Prevent artifacts from being counted above the max
-    if artifacts_object ~= nil then
-      local artifact_current = math.floor(artifacts_object.CurrentStage)
+    if obj_artifacts then
+      local artifact_current = math.floor(obj_artifacts.CurrentStage)
 
       if artifact_current > artifact_max then
-        artifacts_object.CurrentStage = artifact_max
+        obj_artifacts.CurrentStage = artifact_max
       end
     end
 
     -- Toggle Go Mode on or off based on active items
-    if go_mode_object ~= nil and setting_goal_skip_impact_crater_object ~= nil then
-      local go_mode = Tracker:ProviderCountForCode("artifacts" .. artifact_max) > 0
+    if obj_go_mode and obj_setting_goal_skip_impact_crater then
+      local is_go_mode = Tracker:ProviderCountForCode("artifacts" .. artifact_max) > 0
         and Tracker:ProviderCountForCode("missilelauncher") > 0
-        and canBeatImpactCrater(setting_goal_skip_impact_crater_object.Active)
-        and hasAttackVisor()
-        and hasBeam()
+        and canBeatImpactCrater(obj_setting_goal_skip_impact_crater.Active)
+        and tpl_shoot_any_beam()
 
-      if go_mode then
-        go_mode_object.Active = true
+      if is_go_mode then
+        obj_go_mode.Active = true
       else
-        go_mode_object.Active = false
+        obj_go_mode.Active = false
       end
     end
   end
 
-  return 0
+  return nil
 end

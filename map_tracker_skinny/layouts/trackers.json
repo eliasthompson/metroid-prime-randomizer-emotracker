@@ -1,0 +1,82 @@
+{
+  "tracker_broadcast": {
+    "type": "container",
+    "dropshadow": true,
+    "content": {
+      "type": "layout",
+      "key": "tracker_shared_horizontal",
+    },
+  },
+  "tracker_capture_item": {
+    "type": "container",
+    "content":  {
+      "type": "layout",
+      "key": "tracker_shared_horizontal",
+    },
+  },
+  "tracker_default": {
+    "type": "container",
+    "content":  {
+      "type": "layout",
+      "key": "tracker_shared_horizontal",
+    },
+  },
+  "tracker_horizontal": {
+    "type": "container",
+    "background": "#101010",
+    "content": {
+      "type": "dock",
+      "content": [{
+        "type": "dock",
+        "dock": "bottom",
+        "content": [{
+          "type": "group",
+          "dock": "left",
+          "margin": "0, 0, 4, 0",
+          "header": "Items",
+          "content": {
+            "type": "layout",
+            "dropshadow": true,
+            "key": "tracker_shared_horizontal",
+          },
+        }, {
+          "type": "layout",
+          "key": "settings",
+          "dock": "right",
+        }, {
+          "type": "group",
+          "h_alignment": "stretch",
+          "margin": "0, 0, 4, 0",
+          "header": "Pinned Locations",
+          "content": {
+            "type": "recentpins",
+            "style": "wrap",
+            "orientation": "horizontal",
+          },
+        }],
+      }, {
+        "type": "map",
+        "dropshadow": true,
+      }],
+    },
+  },
+  "tracker_vertical": {
+    "type": "container",
+    "background": "#101010",
+    "content": {
+      "type": "group",
+      "header": "Items",
+      "header_content": {
+        "type": "button_popup",
+        "style": "settings",
+        "popup_background": "#101010",
+        "layout": "settings",
+      },
+      "content": {
+        "type": "layout",
+        "dropshadow": true,
+        "key": "tracker_shared_vertical",
+      },
+    },
+  },
+}

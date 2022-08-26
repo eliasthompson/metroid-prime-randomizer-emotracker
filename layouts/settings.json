@@ -6,6 +6,8 @@
       "header": "Settings",
       "content": [{
         "type": "array",
+        /* "width": 272, */
+        "height": 212,
         "orientation": "vertical",
         "content": [{
           "type": "group",

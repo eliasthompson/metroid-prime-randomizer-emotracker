@@ -1,0 +1,51 @@
+[{
+  "name": "Tallon Overworld",
+  "color": "#598d5c",
+  "access_rules": ["$can_access_tallon_overworld"],
+  "children": [{
+    "name": "Landing Site (Missile Expansion)",
+    "access_rules": [
+      "@Landing Site Connections/Ship > Pickup (Missile Expansion)",
+      "{}",
+    ],
+    "sections": [{
+      "name": "Pickup (Missile Expansion)",
+      "item_count": 1,
+    }],
+    "map_locations": [{
+      "map": "Tallon Overworld",
+      "x": 564,
+      "y": 443,
+    }]
+  }, {
+    "name": "Alcove (Space Jump Boots)",
+    "access_rules": [
+      "@Landing Site Connections/Ship > Door to Gully, @Landing Site Doors/Door to Gully, @Alcove Connections/Pickup (Space Jump Boots) > Door to Landing Site, @Alcove Doors/Door to Landing Site", // From Ship + Escape
+      "{@Landing Site Connections/Ship > Door to Gully, @Landing Site Doors/Door to Gully}", // From Ship
+    ],
+    "sections": [{
+      "name": "Pickup (Space Jump Boots)",
+      "item_count": 1,
+    }],
+    "map_locations": [{
+      "map": "Tallon Overworld",
+      "x": 622,
+      "y": 374,
+    }]
+  }, {
+    "name": "Frigate Crash Site (Space Jump Boots)",
+    "access_rules": [
+      "@Landing Site Connections/Ship > Door to Waterfall Cavern, @Landing Site Doors/Door to Waterfall Cavern, @Waterfall Cavern Connections/Door to Landing Site > Door to Frigate Crash Site, @Waterfall Cavern Doors/Door to Frigate Crash Site, @Frigate Crash Site Connections/Door to Waterfall Cavern > Pickup (Missile Expansion)",
+      "{@Landing Site Connections/Ship > Door to Waterfall Cavern, @Landing Site Doors/Door to Waterfall Cavern, @Waterfall Cavern Connections/Door to Landing Site > Door to Frigate Crash Site, @Waterfall Cavern Doors/Door to Frigate Crash Site}",
+    ],
+    "sections": [{
+      "name": "Pickup (Missile Expansion)",
+      "item_count": 1,
+    }],
+    "map_locations": [{
+      "map": "Tallon Overworld",
+      "x": 907,
+      "y": 295,
+    }]
+  }]
+}]
