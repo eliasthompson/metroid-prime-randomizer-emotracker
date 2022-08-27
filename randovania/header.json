@@ -1113,15 +1113,6 @@
                     ]
                 }
             },
-            "Test": {
-                "type": "resource",
-                "data": {
-                    "type": "items",
-                    "name": "MorphBall",
-                    "amount": 1,
-                    "negate": false
-                }
-            },
             "Move Past Scatter Bombu": {
                 "type": "or",
                 "data": {

@@ -1,9 +1,14 @@
+randovania_input_path = os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/randovania/"
+randovania_output_path = os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/scripts/randovania/output/"
+
 ScriptHost:LoadScript("scripts/util/parse_json.lua")
 ScriptHost:LoadScript("scripts/util/common.lua")
 ScriptHost:LoadScript("scripts/randovania/common.lua")
-ScriptHost:LoadScript("scripts/randovania/convertTemplates.lua")
+ScriptHost:LoadScript("scripts/randovania/generate_templates.lua")
+ScriptHost:LoadScript("scripts/randovania/generate_doors.lua")
 
-generate_randovania_templates("header.json")
+generate_templates("header.json", "templates.lua")
+generate_doors("header.json", "doors.lua")
 
 ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/common.lua")
