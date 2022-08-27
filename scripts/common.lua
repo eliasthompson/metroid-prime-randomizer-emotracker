@@ -1,3 +1,4 @@
+-- Legacy, still needed
 function canBeatImpactCrater(setting_goal_skip_impact_crater)
   if setting_goal_skip_impact_crater then
     return true

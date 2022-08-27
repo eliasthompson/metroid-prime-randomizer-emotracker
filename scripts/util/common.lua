@@ -1,5 +1,5 @@
 function to_snake_case(str)
-  return string.gsub(string.gsub(string.gsub(string.gsub(string.lower(str), " ", "_"), "-", ""), "%(", ""), "%)", "")
+  return string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.lower(str), " - ", " "), "-", ""), " ", "_"), "%(", ""), "%)", "")
 end
 
 function table_length(tbl)

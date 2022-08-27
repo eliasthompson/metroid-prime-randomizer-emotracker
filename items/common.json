@@ -102,19 +102,19 @@
   "type": "toggle",
   "loop": true,
   "img": "images/morphballbomb.png",
-  "codes": "morphballbomb,bombs,bomb"
+  "codes": "morphballbombs,morphballbomb,bombs,bomb"
 }, {
   "name": "Power Bomb",
   "type": "toggle",
   "loop": true,
   "img": "images/powerbomb.png",
-  "codes": "powerbomb,pbs,pb"
+  "codes": "powerbombs,powerbomb,pbs,pb"
 }, {
   "name": "Boost Ball",
   "type": "toggle",
   "loop": true,
   "img": "images/boostball.png",
-  "codes": "boostball,boost,pb"
+  "codes": "boostball,boost"
 }, {
   "name": "Spider Ball",
   "type": "toggle",

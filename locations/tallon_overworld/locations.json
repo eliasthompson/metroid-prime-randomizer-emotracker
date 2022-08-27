@@ -1,11 +1,13 @@
 [{
   "name": "Tallon Overworld",
   "color": "#598d5c",
-  "access_rules": ["$can_access_tallon_overworld"],
+  /* "access_rules": ["$can_access_tallon_overworld"], */
   "children": [{
     "name": "Landing Site (Missile Expansion)",
     "access_rules": [
-      "@Landing Site Connections/Ship > Pickup (Missile Expansion)",
+      "
+        $cxn_tallon_overworld_landing_site_ship_to_pickup_missile_expansion
+      ",
       "{}",
     ],
     "sections": [{
@@ -20,8 +22,20 @@
   }, {
     "name": "Alcove (Space Jump Boots)",
     "access_rules": [
-      "@Landing Site Connections/Ship > Door to Gully, @Landing Site Doors/Door to Gully, @Alcove Connections/Pickup (Space Jump Boots) > Door to Landing Site, @Alcove Doors/Door to Landing Site", // From Ship + Escape
-      "{@Landing Site Connections/Ship > Door to Gully, @Landing Site Doors/Door to Gully}", // From Ship
+      "
+        $cxn_tallon_overworld_landing_site_ship_to_door_to_gully,
+        $cxn_tallon_overworld_landing_site_door_to_gully_to_door_to_alcove,
+        $doc_tallon_overworld_landing_site_door_to_alcove,
+        $cxn_tallon_overworld_alcove_door_to_landing_site_to_pickup_space_jump_boots,
+        $cxn_tallon_overworld_alcove_pickup_space_jump_boots_to_door_to_landing_site,
+        $doc_tallon_overworld_alcove_door_to_landing_site,
+        $cxn_tallon_overworld_landing_site_door_to_alcove_to_ship
+      ",
+      "{
+        $cxn_tallon_overworld_landing_site_ship_to_door_to_gully,
+        $cxn_tallon_overworld_landing_site_door_to_gully_to_door_to_alcove,
+        $doc_tallon_overworld_landing_site_door_to_alcove
+      }",
     ],
     "sections": [{
       "name": "Pickup (Space Jump Boots)",
@@ -35,8 +49,19 @@
   }, {
     "name": "Frigate Crash Site (Space Jump Boots)",
     "access_rules": [
-      "@Landing Site Connections/Ship > Door to Waterfall Cavern, @Landing Site Doors/Door to Waterfall Cavern, @Waterfall Cavern Connections/Door to Landing Site > Door to Frigate Crash Site, @Waterfall Cavern Doors/Door to Frigate Crash Site, @Frigate Crash Site Connections/Door to Waterfall Cavern > Pickup (Missile Expansion)",
-      "{@Landing Site Connections/Ship > Door to Waterfall Cavern, @Landing Site Doors/Door to Waterfall Cavern, @Waterfall Cavern Connections/Door to Landing Site > Door to Frigate Crash Site, @Waterfall Cavern Doors/Door to Frigate Crash Site}",
+      "
+        $cxn_tallon_overworld_landing_site_ship_to_door_to_waterfall_cavern,
+        $doc_tallon_overworld_landing_site_door_to_waterfall_cavern,
+        $cxn_tallon_overworld_waterfall_cavern_door_to_landing_site_to_door_to_frigate_crash_site,
+        $doc_tallon_overworld_waterfall_cavern_door_to_frigate_crash_site,
+        $cxn_tallon_overworld_frigate_crash_site_door_to_waterfall_cavern_to_pickup_missile_expansion
+      ",
+      "{
+        $cxn_tallon_overworld_landing_site_ship_to_door_to_waterfall_cavern,
+        $doc_tallon_overworld_landing_site_door_to_waterfall_cavern,
+        $cxn_tallon_overworld_waterfall_cavern_door_to_landing_site_to_door_to_frigate_crash_site,
+        $doc_tallon_overworld_waterfall_cavern_door_to_frigate_crash_site
+      }",
     ],
     "sections": [{
       "name": "Pickup (Missile Expansion)",
