@@ -6,16 +6,27 @@ ScriptHost:LoadScript("scripts/util/parse_json.lua")
 ScriptHost:LoadScript("scripts/util/common.lua")
 ScriptHost:LoadScript("scripts/randovania/common.lua")
 ScriptHost:LoadScript("scripts/randovania/generate_templates.lua")
-ScriptHost:LoadScript("scripts/randovania/generate_doors.lua")
-ScriptHost:LoadScript("scripts/randovania/generate_connections_tallon_overworld.lua")
+ScriptHost:LoadScript("scripts/randovania/generate_connections.lua")
 
-generate_templates("header.json", "templates.lua")
-generate_doors("header.json", "doors.lua")
-generate_connections_tallon_overworld("Tallon Overworld.json", "tallon_overworld/connections.lua")
+generate_templates()
+-- generate_connections("Frigate Orpheon") -- Not yet
+generate_connections("Tallon Overworld")
+generate_connections("Chozo Ruins")
+generate_connections("Magmoor Caverns")
+generate_connections("Phendrana Drifts")
+generate_connections("Phazon Mines")
+generate_connections("Impact Crater")
+-- generate_connections("End of Game") -- Not yet
 
 ScriptHost:LoadScript("scripts/randovania/output/templates.lua")
-ScriptHost:LoadScript("scripts/randovania/output/doors.lua")
-ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld/connections.lua")
+-- ScriptHost:LoadScript("scripts/randovania/output/frigate_orpheon_connections.lua") -- Not yet
+ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua")
+ScriptHost:LoadScript("scripts/randovania/output/chozo_ruins_connections.lua")
+ScriptHost:LoadScript("scripts/randovania/output/magmoor_caverns_connections.lua")
+ScriptHost:LoadScript("scripts/randovania/output/phendrana_drifts_connections.lua")
+ScriptHost:LoadScript("scripts/randovania/output/phazon_mines_connections.lua")
+ScriptHost:LoadScript("scripts/randovania/output/impact_crater_connections.lua")
+-- ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua") -- Not yet
 
 ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/common.lua")
