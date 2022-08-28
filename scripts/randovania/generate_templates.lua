@@ -11,12 +11,12 @@ function generate_templates()
       return error("Unsupported schema version! Check https://github.com/randovania/randovania/blob/main/randovania/game_description/game_migration.py for compatibility.")
     end
 
-    for key, data in pairs(randovania_json.resource_database.requirement_template) do
+    for key, data in sortedPairs(randovania_json.resource_database.requirement_template) do
       str_output = str_output .. "function tpl__" .. to_snake_case(key) .. "() return " .. convert_randovania_item_to_expression(data) .. "end\n"
     end
 
-    for _, types in pairs(randovania_json.dock_weakness_database.types) do
-      for key, data in pairs(types.items) do
+    for _, types in sortedPairs(randovania_json.dock_weakness_database.types) do
+      for key, data in sortedPairs(types.items) do
         local item = {
           ["type"] = "and",
           ["data"] = {

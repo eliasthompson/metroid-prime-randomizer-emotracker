@@ -8,13 +8,13 @@ function generate_connections(worlds)
 
       f_input:close()
 
-      for area_name, area in pairs(world.areas) do
-        for node_name, node in pairs(area.nodes) do
+      for area_name, area in sortedPairs(world.areas) do
+        for node_name, node in sortedPairs(area.nodes) do
           if node.node_type == "dock" then
             str_output = str_output .. "function doc__" .. to_snake_case(world_name .. "__" .. area_name .. "__" .. node_name) .. "() return dor__" .. to_snake_case(node.default_dock_weakness) .. "() end\n"
           end
 
-          for connection_name, connection in pairs(node.connections) do
+          for connection_name, connection in sortedPairs(node.connections) do
             str_output = str_output .. "function cxn__" .. to_snake_case(world_name .. "__" .. area_name .. "__" .. node_name .. "__to__" .. connection_name) .. "() return " .. convert_randovania_item_to_expression(connection) .. "end\n"
           end
         end

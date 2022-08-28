@@ -2,7 +2,7 @@
   "name": "Metroid Prime Randomizer EmoTracker",
   "game_name": "Metroid Prime Randomizer",
   "platform": "randovania",
-  "package_version": "1.0.0",
+  "package_version": "2.0.0",
   "package_uid": "metroid_prime_randomizer_emotracker_eliasthompson",
   "author": "Elias Thompson",
   "enable_unsafe_scripting": true,
