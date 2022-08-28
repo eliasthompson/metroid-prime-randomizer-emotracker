@@ -1,4 +1,4 @@
--- Generated from Randovania Impact Crater.json on 2022/08/28 at 16:09:17
+-- Generated from Randovania Impact Crater.json
 function doc__impact_crater__crater_entry_point__door_to_crater_tunnel_a() return dor__plasma_door() end
 function cxn__impact_crater__crater_entry_point__door_to_crater_tunnel_a__to__teleport_to_artifact_temple() return ( true ) end
 function cxn__impact_crater__crater_entry_point__save_station__to__teleport_to_artifact_temple() return ( true ) end

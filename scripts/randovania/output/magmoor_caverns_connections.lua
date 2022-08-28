@@ -1,4 +1,4 @@
--- Generated from Randovania Magmoor Caverns.json on 2022/08/28 at 16:09:16
+-- Generated from Randovania Magmoor Caverns.json
 function doc__magmoor_caverns__burning_trail__door_to_lake_tunnel() return dor__normal_door() end
 function cxn__magmoor_caverns__burning_trail__door_to_lake_tunnel__to__door_to_save_station_magmoor_a() return ( true ) end
 function doc__magmoor_caverns__burning_trail__door_to_save_station_magmoor_a() return dor__missile_blast_shield() end

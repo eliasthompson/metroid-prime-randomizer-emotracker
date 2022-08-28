@@ -1,4 +1,4 @@
--- Generated from Randovania Phazon Mines.json on 2022/08/28 at 16:09:17
+-- Generated from Randovania Phazon Mines.json
 function doc__phazon_mines__central_dynamo__door_to_dynamo_access() return dor__ice_door() end
 function cxn__phazon_mines__central_dynamo__door_to_dynamo_access__to__fight_trigger() return ( true ) end
 function doc__phazon_mines__central_dynamo__door_to_quarantine_access_a() return dor__ice_door() end
