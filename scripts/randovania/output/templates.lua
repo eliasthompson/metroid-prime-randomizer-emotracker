@@ -1,4 +1,4 @@
--- Generated from Randovania header.json on 2022/08/28 at 16:06:32
+-- Generated from Randovania header.json on 2022/08/28 at 16:09:16
 function tpl__can_use_arm_cannon() return ( Tracker:ProviderCountForCode("combat") > 0 or Tracker:ProviderCountForCode("thermal") > 0 or Tracker:ProviderCountForCode("xray") > 0 ) end
 function tpl__have_all_beams() return ( Tracker:ProviderCountForCode("power") > 0 and Tracker:ProviderCountForCode("wave") > 0 and Tracker:ProviderCountForCode("ice") > 0 and Tracker:ProviderCountForCode("plasma") > 0 and tpl__can_use_arm_cannon() ) end
 function tpl__heatresisting_suit() return ( Tracker:ProviderCountForCode("gravitysuit") > 0 or Tracker:ProviderCountForCode("variasuit") > 0 or Tracker:ProviderCountForCode("phazonsuit") > 0 ) end

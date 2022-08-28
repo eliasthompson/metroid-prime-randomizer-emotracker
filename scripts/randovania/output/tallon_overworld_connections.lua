@@ -1,4 +1,4 @@
--- Generated from Randovania Tallon Overworld.json on 2022/08/28 at 16:06:32
+-- Generated from Randovania Tallon Overworld.json on 2022/08/28 at 16:09:16
 function doc__tallon_overworld__alcove__door_to_landing_site() return dor__normal_door() end
 function cxn__tallon_overworld__alcove__door_to_landing_site__to__pickup_space_jump_boots() return ( true ) end
 function cxn__tallon_overworld__alcove__pickup_space_jump_boots__to__door_to_landing_site() return ( Tracker:ProviderCountForCode("spacejump") > 0 or Tracker:ProviderCountForCode("setting_trick_sjump1") > 0 or ( Tracker:ProviderCountForCode("morphball") > 0 and Tracker:ProviderCountForCode("bombs") > 0 and Tracker:ProviderCountForCode("setting_trick_bj1") > 0 ) ) end

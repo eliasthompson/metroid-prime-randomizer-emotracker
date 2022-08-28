@@ -1,4 +1,4 @@
--- Generated from Randovania Phendrana Drifts.json on 2022/08/28 at 16:06:32
+-- Generated from Randovania Phendrana Drifts.json on 2022/08/28 at 16:09:16
 function doc__phendrana_drifts__aether_lab_entryway__door_to_east_tower() return dor__wave_door() end
 function cxn__phendrana_drifts__aether_lab_entryway__door_to_east_tower__to__door_to_research_lab_aether() return tpl__move_past_scatter_bombu() end
 function doc__phendrana_drifts__aether_lab_entryway__door_to_research_lab_aether() return dor__wave_door() end

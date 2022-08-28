@@ -4,7 +4,8 @@ function generate_connections(worlds)
 
     if f_input then
       local world = JSON.parse(f_input:read("*a"))
-      local str_output = os.date("-- Generated from Randovania " .. world_name .. ".json on %Y/%m/%d at %X\n")
+      -- local str_output = os.date("-- Generated from Randovania " .. world_name .. ".json on %Y/%m/%d at %X\n")
+      local str_output = os.date("-- Generated from Randovania " .. world_name .. ".json\n")
 
       f_input:close()
 

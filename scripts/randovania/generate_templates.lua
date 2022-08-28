@@ -3,7 +3,8 @@ function generate_templates()
 
   if f_input then
     local randovania_json = JSON.parse(f_input:read("*a"))
-    local str_output = os.date("-- Generated from Randovania header.json on %Y/%m/%d at %X\n")
+    -- local str_output = os.date("-- Generated from Randovania header.json on %Y/%m/%d at %X\n")
+    local str_output = os.date("-- Generated from Randovania header.json\n")
 
     f_input:close()
 

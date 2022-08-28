@@ -1,4 +1,4 @@
--- Generated from Randovania Chozo Ruins.json on 2022/08/28 at 16:06:32
+-- Generated from Randovania Chozo Ruins.json on 2022/08/28 at 16:09:16
 function doc__chozo_ruins__antechamber__door_to_reflecting_pool() return dor__ice_door() end
 function cxn__chozo_ruins__antechamber__door_to_reflecting_pool__to__pickup_ice_beam() return ( true ) end
 function cxn__chozo_ruins__antechamber__pickup_ice_beam__to__door_to_reflecting_pool() return ( true ) end
