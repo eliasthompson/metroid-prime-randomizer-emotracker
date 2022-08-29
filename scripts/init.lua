@@ -1,27 +1,3 @@
-_RANDOVANIA_INPUT_PATH = os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/randovania/"
-_RANDOVANIA_OUTPUT_PATH = os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/scripts/randovania/output/"
-_RANDOVANIA_SCHEMA_VERSION = 11
-
-ScriptHost:LoadScript("scripts/util/parse_json.lua")
-ScriptHost:LoadScript("scripts/util/common.lua")
-ScriptHost:LoadScript("scripts/randovania/common.lua")
-ScriptHost:LoadScript("scripts/randovania/generate_templates.lua")
-ScriptHost:LoadScript("scripts/randovania/generate_connections.lua")
-ScriptHost:LoadScript("scripts/randovania/generate_paths.lua")
-
-generate_templates()
-generate_connections({
-  "Tallon Overworld",
-  "Chozo Ruins",
-  "Magmoor Caverns",
-  "Phendrana Drifts",
-  "Phazon Mines",
-  "Impact Crater",
-})
-generate_paths({
-  "Tallon Overworld",
-})
-
 ScriptHost:LoadScript("scripts/randovania/output/templates.lua")
 -- ScriptHost:LoadScript("scripts/randovania/output/frigate_orpheon_connections.lua") -- Not yet
 ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua")
@@ -31,9 +7,10 @@ ScriptHost:LoadScript("scripts/randovania/output/phendrana_drifts_connections.lu
 ScriptHost:LoadScript("scripts/randovania/output/phazon_mines_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/impact_crater_connections.lua")
 -- ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua") -- Not yet
+ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_paths.lua")
 
 ScriptHost:LoadScript("scripts/settings.lua")
-ScriptHost:LoadScript("scripts/common.lua")
+ScriptHost:LoadScript("scripts/common.lua") -- Legacy, still in use for go mode calc
 
 Tracker:AddItems("items/settings.json")
 

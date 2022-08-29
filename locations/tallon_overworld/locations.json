@@ -6,7 +6,7 @@
     "name": "Landing Site (Missile Expansion)",
     "access_rules": [
       "
-        $cxn__tallon_overworld__landing_site__ship__to__pickup_missile_expansion
+        $pth__tallon_overworld__landing_site__ship__to__landing_site__pickup_missile_expansion
       ",
       "{}",
     ],
@@ -23,18 +23,12 @@
     "name": "Alcove (Space Jump Boots)",
     "access_rules": [
       "
-        $cxn__tallon_overworld__landing_site__ship__to__door_to_gully,
-        $cxn__tallon_overworld__landing_site__door_to_gully__to__door_to_alcove,
-        $doc__tallon_overworld__landing_site__door_to_alcove,
-        $cxn__tallon_overworld__alcove__door_to_landing_site__to__pickup_space_jump_boots,
-        $cxn__tallon_overworld__alcove__pickup_space_jump_boots__to__door_to_landing_site,
-        $doc__tallon_overworld__alcove__door_to_landing_site,
-        $cxn__tallon_overworld__landing_site__door_to_alcove__to__ship
+        $pth__tallon_overworld__landing_site__ship__to__alcove__pickup_space_jump_boots
       ",
       "{
-        $cxn__tallon_overworld__landing_site__ship__to__door_to_gully,
-        $cxn__tallon_overworld__landing_site__door_to_gully__to__door_to_alcove,
-        $doc__tallon_overworld__landing_site__door_to_alcove
+        $cxn__tallon_overworld__landing_site__ship__to__landing_site__door_to_gully,
+        $cxn__tallon_overworld__landing_site__door_to_gully__to__landing_site__door_to_alcove,
+        $cxn__tallon_overworld__landing_site__door_to_alcove__to__alcove__door_to_landing_site
       }",
     ],
     "sections": [{
@@ -47,20 +41,16 @@
       "y": 374,
     }]
   }, {
-    "name": "Frigate Crash Site (Space Jump Boots)",
+    "name": "Frigate Crash Site (Missile Expansion)",
     "access_rules": [
       "
-        $cxn__tallon_overworld__landing_site__ship__to__door_to_waterfall_cavern,
-        $doc__tallon_overworld__landing_site__door_to_waterfall_cavern,
-        $cxn__tallon_overworld__waterfall_cavern__door_to_landing_site__to__door_to_frigate_crash_site,
-        $doc__tallon_overworld__waterfall_cavern__door_to_frigate_crash_site,
-        $cxn__tallon_overworld__frigate_crash_site__door_to_waterfall_cavern__to__pickup_missile_expansion
+        $pth__tallon_overworld__landing_site__ship__to__frigate_crash_site__pickup_missile_expansion
       ",
       "{
-        $cxn__tallon_overworld__landing_site__ship__to__door_to_waterfall_cavern,
-        $doc__tallon_overworld__landing_site__door_to_waterfall_cavern,
-        $cxn__tallon_overworld__waterfall_cavern__door_to_landing_site__to__door_to_frigate_crash_site,
-        $doc__tallon_overworld__waterfall_cavern__door_to_frigate_crash_site
+        $cxn__tallon_overworld__landing_site__ship__to__landing_site__door_to_waterfall_cavern,
+        $cxn__tallon_overworld__landing_site__door_to_waterfall_cavern__to__waterfall_cavern__door_to_landing_site,
+        $cxn__tallon_overworld__waterfall_cavern__door_to_landing_site__to__waterfall_cavern__door_to_frigate_crash_site,
+        $cxn__tallon_overworld__waterfall_cavern__door_to_frigate_crash_site__to__frigate_crash_site__door_to_waterfall_cavern
       }",
     ],
     "sections": [{

@@ -148,6 +148,6 @@ function orderedNext(t, state)
   return
 end
 
-function sortedPairs(t)
+function sorted_pairs(t)
   return orderedNext, t, nil
 end
