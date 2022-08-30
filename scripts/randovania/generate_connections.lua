@@ -13,11 +13,11 @@ function generate_connections(worlds)
       for area_name, area in sorted_pairs(world.areas) do
         for node_name, node in sorted_pairs(area.nodes) do
           if node.node_type == "dock" then
-            str_output = str_output .. "function cxn__" .. to_snake_case(world_name .. "__" .. area_name .. "__" .. node_name .. "__to__" .. node.default_connection.area_name .. "__" .. node.default_connection.node_name) .. "() return dor__" .. to_snake_case(node.default_dock_weakness) .. "() end\n"
+            str_output = str_output .. "function cxn__" .. to_snake_case(world_name) .. "__" .. to_snake_case(area_name) .. "__" .. to_snake_case(node_name) .. "__to__" .. to_snake_case(node.default_connection.area_name) .. "__" .. to_snake_case(node.default_connection.node_name) .. "() return dor__" .. to_snake_case(node.default_dock_weakness) .. "() end\n"
           end
 
           for connection_name, connection in sorted_pairs(node.connections) do
-            str_output = str_output .. "function cxn__" .. to_snake_case(world_name .. "__" .. area_name .. "__" .. node_name .. "__to__" .. area_name .. "__" .. connection_name) .. "() return " .. convert_randovania_item_to_expression(connection) .. "end\n"
+            str_output = str_output .. "function cxn__" .. to_snake_case(world_name) .. "__" .. to_snake_case(area_name) .. "__" .. to_snake_case(node_name) .. "__to__" .. to_snake_case(area_name) .. "__" .. to_snake_case(connection_name) .. "() return " .. convert_randovania_item_to_expression(connection) .. "end\n"
           end
         end
       end

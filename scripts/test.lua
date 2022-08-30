@@ -9,15 +9,20 @@ assert(loadfile(os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid
 assert(loadfile(os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/scripts/randovania/generate_connections.lua"))()
 assert(loadfile(os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid_prime_randomizer_emotracker_eliasthompson/scripts/randovania/generate_paths.lua"))()
 
-generate_templates()
-generate_connections({
-  "Tallon Overworld",
-  "Chozo Ruins",
-  "Magmoor Caverns",
-  "Phendrana Drifts",
-  "Phazon Mines",
-  "Impact Crater",
-})
+-- generate_templates()
+-- generate_connections({
+--   "Tallon Overworld",
+--   "Chozo Ruins",
+--   "Magmoor Caverns",
+--   "Phendrana Drifts",
+--   "Phazon Mines",
+--   "Impact Crater",
+-- })
 generate_paths({
   "Tallon Overworld",
+  -- "Chozo Ruins",
+  -- "Magmoor Caverns",
+  -- "Phendrana Drifts",
+  -- "Phazon Mines",
+  -- "Impact Crater",
 })

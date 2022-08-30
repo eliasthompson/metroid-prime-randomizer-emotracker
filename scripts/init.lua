@@ -1,16 +1,20 @@
 ScriptHost:LoadScript("scripts/randovania/output/templates.lua")
--- ScriptHost:LoadScript("scripts/randovania/output/frigate_orpheon_connections.lua") -- Not yet
 ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/chozo_ruins_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/magmoor_caverns_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/phendrana_drifts_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/phazon_mines_connections.lua")
 ScriptHost:LoadScript("scripts/randovania/output/impact_crater_connections.lua")
--- ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_connections.lua") -- Not yet
-ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld_paths.lua")
+ScriptHost:LoadScript("scripts/randovania/output/tallon_overworld__ship__paths.lua")
+ScriptHost:LoadScript("scripts/randovania/output/chozo_ruins__elevator_to_tallon_overworld_transport_to_chozo_ruins_east__paths.lua")
 
 ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/common.lua") -- Legacy, still in use for go mode calc
+
+ -- Remove before release
+ScriptHost:LoadScript("scripts/util/parse_json.lua")
+ScriptHost:LoadScript("scripts/util/common.lua")
+ScriptHost:LoadScript("scripts/scratch.lua")
 
 Tracker:AddItems("items/settings.json")
 
