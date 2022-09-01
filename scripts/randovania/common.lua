@@ -88,3 +88,91 @@ function find_randovania_paths(node, world, paths, node_history)
 
   return paths
 end
+
+function optimize_paths(sub_paths, stop)
+  -- Get common nodes present in all sub paths
+  local common_nodes = sub_paths[1]
+
+  for i = 1, #sub_paths do
+    if i ~= 1 then
+      common_nodes = table_similarities(common_nodes, sub_paths[i])
+    end
+  end
+
+  -- Construct optimized path
+  local optimized_path = clone_table(common_nodes)
+
+  for i = 1, #sub_paths do
+    local last_common_node_index = 0
+
+    for j = 1, #sub_paths[i] do
+      local node_index = table_has_value(optimized_path, sub_paths[i][j])
+
+      if node_index ~= 0 then
+        last_common_node_index = node_index
+      else
+        if type(optimized_path[last_common_node_index + 1]) == "table" then
+          if optimized_path[last_common_node_index + 1][i] then
+            table.insert(optimized_path[last_common_node_index + 1][i], sub_paths[i][j])
+          else
+            table.insert(optimized_path[last_common_node_index + 1], {
+              [1] = sub_paths[i][j]
+            })
+          end
+        else
+          table.insert(optimized_path, last_common_node_index + 1, {
+            [i] = {
+              [1] = sub_paths[i][j]
+            }
+          })
+        end
+      end
+    end
+  end
+
+  -- Optimize path branches
+  for i = 1, #optimized_path do
+    if type(optimized_path[i]) == "table" then
+      optimized_path[i] = table_uniq(optimized_path[i])
+    end
+  end
+
+  -- Shift branch starting nodes into branches for output
+  local output_path = {}
+
+  for i = 1, #optimized_path do
+    if type(optimized_path[i]) ~= "table" and type(optimized_path[i + 1]) ~= "table" then
+      table.insert(output_path, optimized_path[i])
+    elseif type(optimized_path[i]) == "table" then
+      local branches = clone_table(optimized_path[i])
+
+      for j = 1, #optimized_path[i] do
+        table.insert(branches[j], 1, optimized_path[i - 1])
+      end
+
+      if #optimized_path[i] == 1 then
+        table.insert(branches, 1, {
+          [1] = optimized_path[i - 1]
+        })
+      end
+
+      table.insert(output_path, branches)
+    end
+  end
+
+  -- print(stringify_table(common_nodes))
+  -- print(stringify_table(optimized_path))
+
+  -- Optimize sub paths
+  if #common_nodes ~= 0 and not table_eq(common_nodes, output_path) then
+    for i = 1, #output_path do
+      if type(output_path[i]) == "table" then
+        -- print(#output_path[i])
+        -- print(table_eq(common_nodes, output_path))
+        if stop ~= true then output_path[i] = optimize_paths(output_path[i]) end
+      end
+    end
+  end
+
+  return output_path
+end

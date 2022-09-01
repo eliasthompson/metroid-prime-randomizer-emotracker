@@ -19,8 +19,8 @@ assert(loadfile(os.getenv("UserProfile") .. "/Documents/EmoTracker/packs/metroid
 --   "Impact Crater",
 -- })
 generate_paths({
-  "Tallon Overworld",
-  -- "Chozo Ruins",
+  -- "Tallon Overworld",
+  "Chozo Ruins",
   -- "Magmoor Caverns",
   -- "Phendrana Drifts",
   -- "Phazon Mines",

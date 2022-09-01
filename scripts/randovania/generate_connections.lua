@@ -22,7 +22,7 @@ function generate_connections(worlds)
         end
       end
 
-      local f_output = io.open(_RANDOVANIA_OUTPUT_PATH .. to_snake_case(world_name) .. "_connections.lua", "w+b")
+      local f_output = io.open(_RANDOVANIA_OUTPUT_PATH .. to_snake_case(world_name) .. "__connections.lua", "w+b")
 
       if f_output then
         f_output:write(str_output)
