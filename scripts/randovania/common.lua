@@ -89,14 +89,13 @@ function find_randovania_paths(node, world, paths, node_history)
   return paths
 end
 
-function optimize_paths(sub_paths, stop)
+function optimize_paths(sub_paths)
   -- Get common nodes present in all sub paths
   local common_nodes = sub_paths[1]
 
-  for i = 1, #sub_paths do
-    if i ~= 1 then
-      common_nodes = table_similarities(common_nodes, sub_paths[i])
-    end
+
+  for i = 2, #sub_paths do
+    common_nodes = table_similarities(common_nodes, sub_paths[i])
   end
 
   -- Construct optimized path
@@ -160,17 +159,37 @@ function optimize_paths(sub_paths, stop)
     end
   end
 
-  -- print(stringify_table(common_nodes))
-  -- print(stringify_table(optimized_path))
+  -- Group branches by initial split and further optimize if needed
+  for i = 1, #output_path do
+    if type(output_path[i]) == "table" and #output_path[i] > 2 then
+      local new_branches = {}
+      local forks = {}
 
-  -- Optimize sub paths
-  if #common_nodes ~= 0 and not table_eq(common_nodes, output_path) then
-    for i = 1, #output_path do
-      if type(output_path[i]) == "table" then
-        -- print(#output_path[i])
-        -- print(table_eq(common_nodes, output_path))
-        if stop ~= true then output_path[i] = optimize_paths(output_path[i]) end
+      for j = 1, #output_path[i] do
+        if output_path[i][j][2] ~= nil then
+          local fork = output_path[i][j][1] .. output_path[i][j][2]
+
+          if table_has_value(forks, fork) == 0 then
+            table.insert(forks, fork)
+          end
+        end
       end
+
+      if #forks < #output_path[i] then
+        for j = 1, #forks do
+          local matching_branches = {}
+
+          for k = 1, #output_path[i] do
+            if output_path[i][k][2] ~= nil and (output_path[i][k][1] .. output_path[i][k][2]) == forks[j] then
+              table.insert(matching_branches, output_path[i][k])
+            end
+          end
+
+          table.insert(new_branches, optimize_paths(matching_branches))
+        end
+      end
+
+      output_path[i] = clone_table(new_branches)
     end
   end
 
