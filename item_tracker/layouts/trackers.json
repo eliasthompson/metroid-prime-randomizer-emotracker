@@ -24,6 +24,8 @@
   "tracker_horizontal": {
     "type": "container",
     "background": "#101010",
+    "width": 416, // +20
+    "height": 378, // +20+26
     "content": {
       "type": "group",
       "header": "Items",
@@ -43,6 +45,8 @@
   "tracker_vertical": {
     "type": "container",
     "background": "#101010",
+    "width": 416, // +20
+    "height": 378, // +20+26
     "content": {
       "type": "group",
       "header": "Items",
@@ -55,7 +59,7 @@
       "content": {
         "type": "layout",
         "dropshadow": true,
-        "key": "tracker_shared_vertical"
+        "key": "tracker_shared_horizontal"
       }
     }
   }

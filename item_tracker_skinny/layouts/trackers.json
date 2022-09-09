@@ -1,0 +1,62 @@
+{
+  "tracker_broadcast": {
+    "type": "container",
+    "dropshadow": true,
+    "content": {
+      "type": "layout",
+      "key": "tracker_shared_horizontal"
+    }
+  },
+  "tracker_capture_item": {
+    "type": "container",
+    "content":  {
+      "type": "layout",
+      "key": "tracker_shared_horizontal"
+    }
+  },
+  "tracker_default": {
+    "type": "container",
+    "content":  {
+      "type": "layout",
+      "key": "tracker_shared_horizontal"
+    }
+  },
+  "tracker_horizontal": {
+    "type": "container",
+    "background": "#101010",
+    "content": {
+      "type": "group",
+      "header": "Items",
+      "header_content": {
+        "type": "button_popup",
+        "style": "settings",
+        "popup_background": "#101010",
+        "layout": "settings"
+      },
+      "content": {
+        "type": "layout",
+        "dropshadow": true,
+        "key": "tracker_shared_horizontal"
+      }
+    }
+  },
+  "tracker_vertical": {
+    "type": "container",
+    "background": "#101010",
+    "content": {
+      "type": "group",
+      "header": "Items",
+      "header_content": {
+        "type": "button_popup",
+        "style": "settings",
+        "popup_background": "#101010",
+        "layout": "settings"
+      },
+      "content": {
+        "type": "layout",
+        "dropshadow": true,
+        "key": "tracker_shared_horizontal"
+      }
+    }
+  }
+}
