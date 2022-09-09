@@ -6,9 +6,6 @@ function generate_paths(worlds)
 
     if f_input then
       local world = JSON.parse(f_input:read("*a"))
-      local function cxn(node1, node2)
-        return "cxn__" .. to_snake_case(world.name) .. "__" .. node1 .. "__to__" .. node2 .. "()"
-      end
 
       f_input:close()
 
@@ -48,7 +45,7 @@ function generate_paths(worlds)
 
               -- Testing Output
               -- local test_path = "pth__phendrana_drifts__transport_to_magmoor_caverns_south__elevator_transport_to_phendrana_drifts_south__to__frost_cave__pickup_missile"
-              local test_path = "pth__chozo_ruins__transport_to_tallon_overworld_south__elevator_to_tallon_overworld_transport_to_chozo_ruins_south__to__burn_dome__pickup_missile_expansion"
+              local test_path = "pth__chozo_ruins__transport_to_tallon_overworld_south__elevator_to_tallon_overworld_transport_to_chozo_ruins_south__to__crossway__pickup_missile_expansion"
 
               if path_name == test_path then
                 local f_test = io.open(_RANDOVANIA_OUTPUT_PATH .. "test_path.lua", "w+b")
@@ -64,63 +61,7 @@ function generate_paths(worlds)
             local last_file_count = 0
 
             for path_name, output_path in sorted_pairs(output_paths) do
-              local str_output = "function " .. path_name .. "() return"
-
-              -- TODO: Make this a split out function to handle the branch optimization recursiveness
-              for i = 1, (#output_path - 1) do
-                if type(output_path[i]) == "string" then
-                  if i ~= 1 then
-                    str_output = str_output .. "\n  and"
-                  else
-                    str_output = str_output .. "\n "
-                  end
-
-                  if type(output_path[i + 1]) == "string" then
-                    str_output = str_output .. " " .. cxn(output_path[i], output_path[i + 1])
-                  elseif type(output_path[i + 1]) == "table" then
-                    str_output = str_output .. " " .. cxn(output_path[i], output_path[i + 1][1][1])
-                  end
-                elseif type(output_path[i]) == "table" then
-                  if i ~= 1 then
-                    str_output = str_output .. "\n  and"
-                  end
-
-                  str_output = str_output .. "\n  (\n   "
-
-                  for j = 1, #output_path[i] do
-                    if j ~= 1 then
-                      str_output = str_output .. " or"
-                    end
-
-                    str_output = str_output .. " ("
-
-                    for k = 1, #output_path[i][j] do
-                      if k ~= 1 then
-                        str_output = str_output .. "\n      and"
-                      else
-                        str_output = str_output .. "\n     "
-                      end
-
-                      if output_path[i][j][k + 1] ~= nil then
-                        str_output = str_output .. " " .. cxn(output_path[i][j][k], output_path[i][j][k + 1])
-                      else
-                        if type(output_path[i + 1]) == "string" then
-                          str_output = str_output .. " " .. cxn(output_path[i][j][k], output_path[i + 1])
-                        elseif type(output_path[i + 1]) == "table" then
-                          str_output = str_output .. " " .. cxn(output_path[i][j][k], output_path[i + 1][1][1])
-                        end
-                      end
-                    end
-
-                    str_output = str_output .. "\n    )"
-                  end
-
-                  str_output = str_output .. "\n  )"
-                end
-              end
-
-              str_output = str_output .. "\nend\n\n"
-
+              local str_output = "function " .. path_name .. "() return" .. generate_control_structure(output_path, world_name, 2) .. "\nend\n\n"
               local f_output = io.open(_RANDOVANIA_OUTPUT_PATH .. to_snake_case(world_name) .. "__" .. to_snake_case(node_name) .. "__paths__" .. file_count .. ".lua", "ab")
 
               if f_output then

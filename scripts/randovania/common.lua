@@ -195,3 +195,59 @@ function optimize_paths(sub_paths)
 
   return output_path
 end
+
+function cxn(world_name, node1, node2)
+  return "cxn__" .. to_snake_case(world_name) .. "__" .. node1 .. "__to__" .. node2 .. "()"
+end
+
+function tab(spaces)
+  local str = ""
+  for i = 1, spaces do str = str .. " " end
+  return str
+end
+
+function find_node(path, i, parent_path, j, gparent_path, k)
+  if type(path[i]) == "table" then
+    if type(path[i][1]) == "table" then
+      return find_node(path[i], 1, path, i)
+    end
+
+    return path[i][1]
+  elseif path[i] == nil then
+    return find_node(parent_path, j, gparent_path, k)
+  end
+
+  return path[i]
+end
+
+function generate_control_structure(output_path, world_name, indent)
+  local str_output = ""
+
+  for i = 1, (#output_path - 1) do
+    if i ~= 1 then
+      str_output = str_output .. " and "
+    end
+
+    str_output = str_output .. "(\n" .. tab(indent + 2)
+
+    if type(output_path[i]) == "string" then
+      str_output = str_output .. cxn(world_name, output_path[i], find_node(output_path, i + 1))
+    elseif type(output_path[i]) == "table" then
+      str_output = str_output .. tab(indent + 2) .. "(\n" .. tab(indent + 4)
+
+      for j = 1, #output_path[i] do
+        if j ~= 1 then
+          str_output = str_output .. " or "
+        end
+
+        str_output = str_output .. generate_control_structure(output_path[i][j], world_name, indent + 4)
+      end
+
+      str_output = str_output .. "\n" .. tab(indent + 2) .. ")"
+    end
+
+    str_output = str_output .. "\n" .. tab(indent) .. ")"
+  end
+
+  return str_output
+end
